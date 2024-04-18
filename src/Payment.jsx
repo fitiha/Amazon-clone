@@ -5,10 +5,10 @@ import CheckoutProduct from "./CheckoutProduct";
 import { Link } from "react-router-dom";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import axios from './axios';
+// import axios from './axios';
 
 function Payment() {
-    const [{ basket, user }, dispatch] = useStateValue();
+    const [{ basket, user },] = useStateValue();
 
 
     const getBasketTotal = (basket) =>
@@ -22,7 +22,7 @@ function Payment() {
 
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState("");
-    const [clientSecret, setClientSecret] = useState(true);
+    const [clientSecret,] = useState(true);
 
     useEffect(() => {
         const getClientSecret = async () => {
